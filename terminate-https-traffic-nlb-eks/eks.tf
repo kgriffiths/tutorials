@@ -49,10 +49,6 @@ module "vpc" {
     "kubernetes.io/cluster/${local.cluster_name}" = "shared"
     "kubernetes.io/role/internal-elb"             = "1"
   }
-
-  tags = {
-    Environment = "dev"
-  }
 }
 
 module "eks-cluster" {
